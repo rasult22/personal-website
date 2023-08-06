@@ -3,7 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 
 const last_posts = posts.slice(0, 3);
 ---
@@ -11,20 +13,30 @@ const last_posts = posts.slice(0, 3);
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
-    <div class="py-2">
+    <div class="text-5xl font-bold">I'm Rassulzhan Turganov</div>
+    <div class="text-3xl py-3 font-bold">
+      Frontend Developer and Entrepreneur
+    </div>
+    <div class="py-2 flex-col space-y-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        I specialize in building complex web applications using React, Vue,
+        Svelte.
+      </text>
+      <br />
+      <text class="text-lg">
+        I develop multiple platform mobile applications using
+        Ionic/Cordova/Capcitor and React Native.
+      </text>
+      <br />
+      <text class="text-lg">
+        I specialize in creating modern, visually appealing, and SEO-optimized
+        corporate websites with Astro.buid and Strapi CMS
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
+      <a class="btn" href="https://instagram.com/rasyokin" target="_blank">
+        Let's connect!</a
+      >
     </div>
   </div>
 
@@ -33,24 +45,24 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="dreambody.ai"
+    img="/dreambody.png"
+    desc="Participating in developemnt of AI-Powered Realistic Body Transformations app. Web, iOS, Android"
+    url="https://dreambody.ai"
     badge="NEW"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="smm.art"
+    img="/smmart.png"
+    desc="SMMart - new AI-system generates requested texts and pictures in a click"
+    url="https://www.smm.art"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
+    title="Мой Банк | Kaspi Gold"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    desc="SPA приложение как "
     url="#"
     badge="FOSS"
   />
